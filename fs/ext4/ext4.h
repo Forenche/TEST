@@ -1183,7 +1183,6 @@ struct ext4_inode_info {
 #define ext4_test_bit			test_bit_le
 #define ext4_find_next_zero_bit		find_next_zero_bit_le
 #define ext4_find_next_bit		find_next_bit_le
-
 extern void ext4_set_bits(void *bm, int cur, int len);
 
 /*
@@ -1336,6 +1335,7 @@ struct ext4_super_block {
 #define EXT4_MF_MNTDIR_SAMPLED		0x0001
 #define EXT4_MF_FS_ABORTED		0x0002	/* Fatal error detected */
 #define EXT4_MF_TEST_DUMMY_ENCRYPTION	0x0004
+#define EXT4_KEY_DESC_PREFIX_SIZE 5
 
 #ifdef CONFIG_EXT4_FS_ENCRYPTION
 #define DUMMY_ENCRYPTION_ENABLED(sbi) (unlikely((sbi)->s_mount_flags & \

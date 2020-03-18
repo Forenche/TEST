@@ -8,10 +8,10 @@
  */
 
 #include <linux/module.h>
-/* #include <linux/syscalls.h> */
+#include <linux/syscalls.h> 
 #include <linux/skbuff.h>
 #include <linux/filter.h>
-/* #include <linux/bpf.h> */
+#include <linux/bpf.h>
 
 #include <linux/netfilter/xt_bpf.h>
 #include <linux/netfilter/x_tables.h>
@@ -27,11 +27,8 @@ static int __bpf_mt_check_bytecode(struct sock_filter *insns, __u16 len,
 {
 	struct sock_fprog_kern program;
 
-	if (info->bpf_program_num_elem > XT_BPF_MAX_NUM_INSTR)
+	if (len > XT_BPF_MAX_NUM_INSTR)
 		return -EINVAL;
-
-	program.len = info->bpf_program_num_elem;
-	program.filter = info->bpf_program;
 
 	program.len = len;
 	program.filter = insns;

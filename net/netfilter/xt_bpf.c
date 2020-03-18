@@ -8,10 +8,10 @@
  */
 
 #include <linux/module.h>
-#include <linux/syscalls.h>
+/* #include <linux/syscalls.h> */
 #include <linux/skbuff.h>
 #include <linux/filter.h>
-#include <linux/bpf.h>
+/* #include <linux/bpf.h> */
 
 #include <linux/netfilter/xt_bpf.h>
 #include <linux/netfilter/x_tables.h>

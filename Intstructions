@@ -1,0 +1,24 @@
+I assume no responsibility if anything happens
+ to your phone.
+You and only you are responsible if anything
+ goes wrong.
+
+Prerequisites:
+Unlocked bootloader.
+Custom ROM.
+Recovery installed.
+Flashed latest magisk.
+Patience.
+
+Process:
+1. Create a backup of boot image and of dtbo too if possible.
+2. Flash magisk if you haven't.
+3. Flash kernel zip.
+4. Reboot
+
+Note: If your phone goes to splash screen and 
+keeps looping, press all 3 buttons till phone
+boots into bootloader, reboot to recovery, flash
+kernel zip again, wipe cache and dalvik and
+reboot to system. In case the phone gets stuck
+at boot animation, follow the same procedure.
